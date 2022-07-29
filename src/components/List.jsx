@@ -11,7 +11,7 @@ export default function List({ data }) {
             <div className="cell h">Population</div>
             <div className="cell h">Slug State</div>{" "}
           </div>
-          <div>
+          <div class="longlist">
             <ul>
               {data.map((e) => {
                 return (
