@@ -4,12 +4,12 @@ export default function List({ data }) {
       return (
         <div className="data">
           <div className="entry">
-            <div className="cell">ID State</div>{" "}
-            <div className="cell">State</div>{" "}
-            <div className="cell">ID Year</div> 
-            <div className="cell">Year</div>
-            <div className="cell">Population</div>
-            <div className="cell">Slug State</div>{" "}
+            <div className="cell h">ID State</div>{" "}
+            <div className="cell h">State</div>{" "}
+            <div className="cell h">ID Year</div> 
+            <div className="cell h">Year</div>
+            <div className="cell h">Population</div>
+            <div className="cell h">Slug State</div>{" "}
           </div>
           <div>
             <ul>
