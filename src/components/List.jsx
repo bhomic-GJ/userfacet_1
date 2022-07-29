@@ -1,4 +1,51 @@
 export default function List({ data }) {
+  
+  let currentry = 1;
+  
+  let scrollamt = 0;
+  function nextentry(){
+    
+    let entryarr = document.querySelectorAll('.entry');
+    
+    /*
+    tried... scrolling logic...
+    let entrydiv = document.querySelectorAll('.entry');
+    
+    let cs = getComputedStyle(entrydiv);
+    
+    let eh = entrydiv.offsetHeight + 1;
+    scrollamt += eh;
+    let longlist = document.querySelector('.longlist');
+    longlist.scrollTop =scrollamt;
+    */
+    
+
+    
+    if(currentry < entryarr.length - 1){
+      
+    for(let i =1; i < entryarr.length; i++){
+      entryarr[i].style.display = "none";
+    }
+      currentry ++;
+      entryarr[currentry].style.display = "block";      
+    }
+  }
+  
+  function preventry(){
+
+    let entryarr = document.querySelectorAll('.entry');
+
+    
+    if(currentry > 2){
+    
+    for(let i =1; i < entryarr.length; i++){
+      entryarr[i].style.display = "none";
+    }
+      currentry --;
+      entryarr[currentry].style.display = "block";      
+    }
+  }
+  
   if (data != undefined) {
     if (data.length > 0) {
       return (
@@ -27,10 +74,15 @@ export default function List({ data }) {
               })}
             </ul>
           </div>
+  
+        <div className="nextbtn prevbtn" onClick={preventry}>Prev</div>
+   
+        <div className="nextbtn" onClick={nextentry}>Next</div>
         </div>
+  
       );
     } else {
-      return <div className="data">No Records Found</div>;
+      return <div className="data" >No Records Found</div>;
     }
   }
 }
