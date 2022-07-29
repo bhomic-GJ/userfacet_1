@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from "react";
 import List from './components/List.jsx';
 
-import "./styles/styles.css";
-
 import "./styles/mystyles.css";
 
-
-import PageRouter from "./components/router.jsx";
-
-import Seo from './components/seo.jsx';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -82,8 +76,8 @@ export default function App() {
         <h1>Userfacet</h1>
         <h2>Population Search</h2>
         
-        <div className="seachbox">
-            <input id="searchtext" value ={data.year} type="number" min ="1800" onChange={search} placeHolder="year"></input>
+        <div className="searchbox">
+          <div className="ylabel">Year </div><input id="searchtext" value ={data.year} type="number" min ="1800" onChange={search} placeHolder="year"></input>
         </div>
         <div className="main">
           <List data={data.records} />
