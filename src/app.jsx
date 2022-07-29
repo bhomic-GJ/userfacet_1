@@ -71,8 +71,13 @@ export default function App() {
   }  
   
   return (
+    
     <div className="App">
+      
       <div className="main">
+        
+       <div id="back"></div>
+        <div className="contents">
         <h1>Userfacet</h1>
         <h2>Population Search</h2>
         
@@ -81,6 +86,7 @@ export default function App() {
         </div>
         <div className="main">
           <List data={data.records} />
+        </div>
         </div>
       </div>  
     </div>
